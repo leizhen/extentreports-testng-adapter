@@ -198,7 +198,7 @@ public class ExtentService implements Serializable {
             ExtentHtmlReporter html = new ExtentHtmlReporter(out);
 
             //将resourceCDN改为github
-            html.config().setResourceCDN(ResourceCDN.GITHUB);
+            html.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
 
             attach(html, properties, CONFIG_HTML_KEY);
         }
