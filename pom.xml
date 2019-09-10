@@ -5,7 +5,7 @@
 
     <groupId>com.aventstack</groupId>
     <artifactId>extentreports-testng-adapter</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.3.X</version>
     <name>extentreports-testng-adapter</name>
     <url>http://extentreports.com</url>
     <description>TestNG adapter for Extent Framework</description>
@@ -76,14 +76,18 @@
     </build>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+            <id>nexus-releases</id>
+            <url>
+                http://192.168.10.32:8081/repository/maven-releases/
+            </url>
         </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>
+                http://192.168.10.32:8081/repository/maven-snapshots/
+            </url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>

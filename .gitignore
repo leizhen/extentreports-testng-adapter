@@ -33,3 +33,7 @@ target/
 
 # testng
 test-output/
+/pom.xml
+/.idea/
+.idea/
+extentreports-testng-adapter.iml

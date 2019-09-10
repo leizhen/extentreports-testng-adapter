@@ -18,6 +18,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.ExtentKlovReporter;
 import com.aventstack.extentreports.reporter.ExtentLoggerReporter;
 import com.aventstack.extentreports.reporter.ExtentTabularReporter;
+import com.aventstack.extentreports.reporter.configuration.ResourceCDN;
 
 public class ExtentService implements Serializable {
 
@@ -195,6 +196,10 @@ public class ExtentService implements Serializable {
         private static void initHtml(Properties properties) {
             String out = getOutputPath(properties, OUT_HTML_KEY);
             ExtentHtmlReporter html = new ExtentHtmlReporter(out);
+
+            //将resourceCDN改为github
+            html.config().setResourceCDN(ResourceCDN.GITHUB);
+
             attach(html, properties, CONFIG_HTML_KEY);
         }
 
